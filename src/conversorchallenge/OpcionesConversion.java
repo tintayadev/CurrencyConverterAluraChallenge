@@ -14,38 +14,43 @@ public class OpcionesConversion {
     ConvertirMonedas monedas = new ConvertirMonedas();
 	
 	public void ConvertirMonedas(double valor) {
-	String opcion = JOptionPane.showInputDialog(null,
-			"Elije la moneda a la que deseas convertir tu dinero", "Moneda", JOptionPane.PLAIN_MESSAGE, null, new Object[] 
-					{"De Pesos Dominicano a Dólar", "De Pesos Dominicano a Euro", "De Pesos Dominicano a Libra Esterlina", "De Pesos a Yen", "De Pesos a Won Coreano", 
-					"De Dólar a Pesos","De Euro a Pesos"},"Selección").toString();
+	String opcion = JOptionPane.showInputDialog(
+                null,
+		"Elije la moneda a la que deseas convertir tu dinero",
+                "Moneda",
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                new Object[]{"De Bolivianos a Dólar", "De Bolivianos a Euro", "De Bolivianos a Libra Esterlina", "De Bolivianos a Yen", "De Bolivianos a Won Coreano", "De Dólar a Bolivianos","De Euro a Bolivianos"},
+                "Selección"
+        ).toString();
 
 	switch (opcion) {
-	case "De Pesos Dominicano a Dólar" :
-		monedas.ConvertirPesoDominicanosADolares(valor);
+	case "De Bolivianos a Dólar" :
+		monedas.ConvertirBolivianosADolares(valor);
 		break;
 	
-	case "De Pesos Dominicano a Euro" :
-		monedas.ConvertirPesoDominicanosAEuro(valor);
+	case "De Bolivianos a Euro" :
+		monedas.ConvertirBolivianosAEuro(valor);
 		break;
 		
-	case "De Pesos Dominicano a Libra Esterlina" :
-		monedas.ConvertirPesoDominicanosAEuro(valor);
+	case "De Bolivianos a Libra Esterlina" :
+		monedas.ConvertirBolivianosAEsterlina(valor);
 		break;
 	
-	case "De Pesos a Yen" :
-		monedas.ConvertirDePesosaYen(valor);
+	case "De Bolivianos a Yen" :
+		monedas.ConvertirDeBolivianosAYen(valor);
 		break;
 		
-	case "De Pesos a Won Coreano" :
-		monedas.ConvertirDePesosaWonCoreano(valor);
+	case "De Bolivianos a Won Coreano" :
+		monedas.ConvertirDeBolivianosAWonCoreano(valor);
 		break;
 	
-	case "De Dólar a Pesos" :
-		monedas.ConvertirDeDólarPesos(valor);
+	case "De Dólar a Bolivianos" :
+		monedas.ConvertirDeDolarABolivianos(valor);
 		break;
 		
-	case "De Euro a Pesos" :
-		monedas.ConvertirDeEuroPeso(valor);
+	case "De Euro a Bolivianos" :
+		monedas.ConvertirDeEuroABoliviano(valor);
 		break;
 		
 		}
